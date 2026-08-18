@@ -63,8 +63,12 @@ Fill in `references/claude-md-template.md` and
 `references/agents-md-template.md` with what Step 1 produced, and write
 them to the repo root. Read the "why each section exists" notes at the
 bottom of each template before filling them in blind — a couple of the
-sections (especially "Starting new plan work" in CLAUDE.md) need to stay
-close to verbatim to do their job.
+sections need to stay close to verbatim to do their job: "Starting new
+plan work" (what makes a cold-start agent go read the ledger first) and
+"Model convention" (the Fable 5 orchestrator / Opus implementer split —
+include it by default, since the whole point of writing it down is that
+a fresh session shouldn't need to re-learn or re-ask about a preference
+that only ever lived in a prior conversation).
 
 ## Step 3 — Scaffold docs/
 

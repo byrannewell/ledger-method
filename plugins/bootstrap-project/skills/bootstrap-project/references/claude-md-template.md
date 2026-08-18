@@ -30,6 +30,17 @@ filename and status.
 To execute a plan: invoke `superpowers:subagent-driven-development` (or
 inline execution for simple mechanical tasks).
 
+## Model convention
+
+This orchestrator session runs on **Fable 5** — for steering, delegating,
+and holding context across a long, branching conversation. Any `Agent`
+dispatch that writes or reviews code should pass `model: "opus"`
+explicitly rather than inherit the session's model — an implementer does
+one bounded task and produces a diff, which rewards depth over breadth,
+the opposite tradeoff from the orchestrator's job. This is a default
+worth overriding whenever a task clearly calls for something else, not a
+rule to follow blindly.
+
 ## Key decisions already locked in (don't re-litigate)
 
 - <Stack, one line per irreversible choice — framework, database, auth
@@ -69,3 +80,10 @@ inline execution for simple mechanical tasks).
 - **"Local env quirks"** is for the one-hour sinkholes — an arm64 Docker
   image bug, a dev server that hangs on a specific port — where the fix
   is empirically known but re-discovering it from scratch is expensive.
+- **"Model convention"** is written down, not left as tribal habit,
+  because a fresh session in a fresh repo has no memory of a preference
+  that only ever lived in someone's head. Include this section by
+  default across projects using this method — it's a documented default
+  precisely so it doesn't need re-deciding or re-explaining every time,
+  not a constraint that overrides judgment when a task clearly wants a
+  different split.
