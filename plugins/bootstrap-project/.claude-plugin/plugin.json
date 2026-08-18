@@ -1,0 +1,8 @@
+{
+  "name": "bootstrap-project",
+  "version": "1.0.0",
+  "description": "Bootstraps a new project with the Ledger Method — CLAUDE.md, a docs/ tree, plan-ledger and rev-tracker files, and a memory-backup hook.",
+  "author": {
+    "name": "Byran Newell"
+  }
+}

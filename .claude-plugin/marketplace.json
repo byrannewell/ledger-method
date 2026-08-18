@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ledger-method",
+  "description": "Personal marketplace for the Ledger Method — a spec-driven-development scaffolding skill for bootstrapping new projects.",
+  "owner": {
+    "name": "Byran Newell"
+  },
+  "plugins": [
+    {
+      "name": "bootstrap-project",
+      "description": "Bootstraps a new project with the Ledger Method — CLAUDE.md, a docs/ tree, plan-ledger and rev-tracker files, and a memory-backup hook.",
+      "author": {
+        "name": "Byran Newell"
+      },
+      "source": "./plugins/bootstrap-project"
+    }
+  ]
+}
